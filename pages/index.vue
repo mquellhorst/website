@@ -1,68 +1,62 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        website
-      </h1>
-      <h2 class="subtitle">
-        My rad Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green"
-        >Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >GitHub</a>
+  <div>
+    <front-header />
+    <posts />
+    <section class="section container has-text-centered">
+    <div class="columns">
+      <div class="column is-one-third">
+        <div class="box">
+          <h4>Product Design</h4>
+          <ul>
+            <li>Strategy & Concept</li>
+            <li>User Experience Design</li>
+            <li>Brand and Visual Identity</li>
+          </ul>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="box">
+          <h4>Development</h4>
+          <ul>
+            <li>iOS, Android</li>
+            <li>React, VueJS</li>
+            <li>Python, Java, PHP</li>
+          </ul>
+        </div>
+      </div>
+      <div class="column is-one-third">
+        <div class="box">
+          <h4>Knowledge</h4>
+          <ul>
+            <li>Blockchain</li>
+            <li>Artificial Intelligence</li>
+            <li>Bioinformatics</li>
+          </ul>
+        </div>
       </div>
     </div>
+  </section>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import FrontHeader from '@/components/FrontHeader'
+import Posts from '@/components/Posts'
 
 export default {
   components: {
-    Logo
+    FrontHeader,
+    Posts
   }
 }
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+<style lang="scss">
+h4 {
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-family: "Kanit", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.075rem;
 }
 </style>
